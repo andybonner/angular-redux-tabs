@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
+import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 
 import { rootReducer, IAppState, INITIAL_STATE } from '../store';
 import { TabActions } from './app.actions';
@@ -24,10 +24,19 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(ngRedux: NgRedux<IAppState>) {
+  constructor(
+    ngRedux: NgRedux<IAppState>,
+    devTools: DevToolsExtension
+  ) {
+    const storeEnhancers = devTools.isEnabled() ?
+      [ devTools.enhancer() ] :
+      [];
+
     ngRedux.configureStore(
       rootReducer,
-      INITIAL_STATE
+      INITIAL_STATE,
+      [],
+      storeEnhancers
     );
   }
 }
