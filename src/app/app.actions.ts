@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Action } from 'redux';
+// import AnyAction which extends Action but allows for other props besides just type
+import { AnyAction } from 'redux';
 
 @Injectable()
 export class TabActions {
   static SELECT = 'SELECT';
   static POPULATE = 'POPULATE';
 
-  select(payload): Action {
+  select(payload): AnyAction {
     return {
-      type: TabActions.SELECT
-      // account for action payload here?
+      type: TabActions.SELECT,
+      payload: payload
     };
   }
 
-  populate(): Action {
+  populate(): AnyAction {
     return { type: TabActions.POPULATE };
   }
 }

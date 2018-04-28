@@ -35,7 +35,8 @@ Still to be seen: if the tabs component is subscribed to the tabs array, and the
 is that enough to keep anything from showing up in the DOM? Will I have to mess with programmatic visibility?
 */
 
-import { Action } from 'redux';
+// AnyAction: extends Action, but allows for other props besides just type
+import { AnyAction } from 'redux';
 import { TabActions } from './app/app.actions';
 import { tabData } from './sampleData';
 
@@ -45,10 +46,10 @@ export interface IAppState {
   activeTabContent: string; // or is there another type for HTML?
 }
 
-export function rootReducer(lastState: IAppState, action: Action): IAppState { // do I need the lastState arg if I'm not going to use it?
+
+export function rootReducer(lastState: IAppState, action: AnyAction): IAppState { // do I need the lastState arg if I'm not going to use it?
   switch (action.type) {
-    // 1. where do I account for the action payload of finding out the index of the clicked tab?
-    // 2. how can I get a nice array of sample data in here and reference it?
+    // How can I get a nice array of sample data in here and reference it?
     case TabActions.POPULATE: return {
       tabsArray: tabData,
       // aren't the next 2 lines kinda boilerplatey? Is there a better way of saying "all other props stay the same"?
