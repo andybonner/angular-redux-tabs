@@ -1,3 +1,4 @@
-<p>
-  tab-row works!
-</p>
+<ul>
+  <li *ngFor="let tab of tabsArray$ | async; let i = index" (click)="select(i)" > {{tab.title}} </li>
+  <!-- TODO: also Observe activeTab and style accordingly -->
+</ul>

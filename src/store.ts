@@ -31,8 +31,8 @@ export function rootReducer(lastState: IAppState, action: AnyAction): IAppState 
     case TabActions.SELECT: return {
       populated: lastState.populated,
       tabsArray: lastState.tabsArray,
-      activeTabIndex: action.payload.activeIndx,
-      activeTabContent: tabData[action.payload.activeIndx].content
+      activeTabIndex: action.payload,
+      activeTabContent: tabData[action.payload].content
     };
   }
 
