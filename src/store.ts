@@ -26,13 +26,13 @@ export function rootReducer(lastState: IAppState, action: AnyAction): IAppState 
       tabsArray: tabData,
       // aren't the next 2 lines kinda boilerplatey? Is there a better way of saying "all other props stay the same"?
       activeTabIndex: 0,
-      activeTabContent: tabData[0]
+      activeTabContent: tabData[0].content
     };
     case TabActions.SELECT: return {
       populated: lastState.populated,
       tabsArray: lastState.tabsArray,
       activeTabIndex: action.payload,
-      activeTabContent: tabData[action.payload].content
+      activeTabContent: lastState.tabsArray[action.payload].content
     };
   }
 
