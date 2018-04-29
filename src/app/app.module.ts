@@ -9,10 +9,12 @@ import { rootReducer, IAppState, INITIAL_STATE } from '../store';
 import { TabActions } from './app.actions';
 
 import { AppComponent } from './app.component';
+import { PopulateButtonComponent } from './populate-button/populate-button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PopulateButtonComponent
   ],
   imports: [
     BrowserModule,
