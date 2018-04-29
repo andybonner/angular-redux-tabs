@@ -18,7 +18,7 @@ export const INITIAL_STATE: IAppState = {
 };
 
 // In a more complex app I would probably want to break reducers out into their own file
-export function rootReducer(lastState: IAppState, action: AnyAction): IAppState { // do I need the lastState arg if I'm not going to use it?
+export function rootReducer(lastState: IAppState, action: AnyAction): IAppState {
   switch (action.type) {
     // How can I get a nice array of sample data in here and reference it?
     case TabActions.POPULATE: return {

@@ -1,3 +1,5 @@
-<!-- TODO: Figure out what's wrong with the "populated" observable, then *ngIf button else tabs -->
-<app-populate-button></app-populate-button>
-<app-tab-holder></app-tab-holder>
+<!-- In Redux initial state, populated=false, so populate-button will render -->
+<app-tab-holder *ngIf="populated$ | async; else btn"></app-tab-holder>
+<ng-template #btn>
+  <app-populate-button></app-populate-button>
+</ng-template>

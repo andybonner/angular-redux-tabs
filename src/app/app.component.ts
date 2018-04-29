@@ -10,4 +10,8 @@ import { IAppState } from '../store';
 })
 export class AppComponent {
   title = 'app';
+
+  @select() readonly populated$: Observable<boolean>;
+
+  constructor(private ngRedux: NgRedux<IAppState>) {}
 }
