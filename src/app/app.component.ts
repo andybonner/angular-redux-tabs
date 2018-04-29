@@ -10,6 +10,4 @@ import { IAppState } from '../store';
 })
 export class AppComponent {
   title = 'app';
-  // NB for future: tab component will need an Observable on the tabs to dispatch select with appropriate index
-
 }
