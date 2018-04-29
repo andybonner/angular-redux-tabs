@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { PopulateButtonComponent } from './populate-button/populate-button.component';
 import { TabHolderComponent } from './tab-holder/tab-holder.component';
 import { TabRowComponent } from './tab-row/tab-row.component';
+import { TabContentComponent } from './tab-content/tab-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopulateButtonComponent,
     TabHolderComponent,
-    TabRowComponent
+    TabRowComponent,
+    TabContentComponent
   ],
   imports: [
     BrowserModule,
