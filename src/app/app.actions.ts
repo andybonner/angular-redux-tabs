@@ -16,7 +16,10 @@ export class TabActions {
     };
   }
 
-  populate(): AnyAction {
-    return { type: TabActions.POPULATE };
+  populate(payload): AnyAction {
+    return {
+      type: TabActions.POPULATE,
+      payload: payload
+    };
   }
 }

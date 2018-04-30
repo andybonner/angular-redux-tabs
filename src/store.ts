@@ -1,7 +1,7 @@
 // AnyAction: extends Action, but allows for other props besides just type
 import { AnyAction } from 'redux';
 import { TabActions } from './app/app.actions';
-import { tabData } from './sampleData';
+import { tabData, tabData2 } from './sampleData';
 
 export interface IAppState {
   populated: boolean;
@@ -23,10 +23,10 @@ export function rootReducer(lastState: IAppState, action: AnyAction): IAppState 
     // How can I get a nice array of sample data in here and reference it?
     case TabActions.POPULATE: return {
       populated: true,
-      tabsArray: tabData,
+      tabsArray: action.payload,
       // aren't the next 2 lines kinda boilerplatey? Is there a better way of saying "all other props stay the same"?
       activeTabIndex: 0,
-      activeTabContent: tabData[0].content
+      activeTabContent: action.payload[0].content
     };
     case TabActions.SELECT: return {
       populated: lastState.populated,

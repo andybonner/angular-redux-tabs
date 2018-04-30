@@ -1,7 +1,8 @@
 <!-- In Redux initial state, populated=false, so populate-button will render -->
 <div class="valign-wrapper">
   <app-tab-holder *ngIf="populated$ | async; else btn"></app-tab-holder>
+  <app-populate-button *ngIf="(tabsArray$ | async).length === 3" [dataSet]="tabData2" extraText=" more"></app-populate-button>
   <ng-template #btn>
-    <app-populate-button></app-populate-button>
+    <app-populate-button [dataSet]="tabData" extraText=""></app-populate-button>
   </ng-template>
 </div>
