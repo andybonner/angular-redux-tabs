@@ -5,4 +5,16 @@ li {
   height: 48px;
   text-transform: uppercase;
   padding: 0 24px;
+  color: #ffc107;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 2px solid #ffe082;
+}
+
+.active {
+  font-weight: bold;
+  background-color: #ffc107;
+  color: white;
 }

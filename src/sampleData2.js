@@ -1,5 +1,17 @@
 export const tabData = [
   {
+    title: 'The Phantom Menace',
+    content: `<p>You can't be serious.</p>`
+  },
+  {
+    title: 'Attack of the Clones',
+    content: `<p>Yeah, ok, I guess.</p>`
+  },
+  {
+    title: 'Revenge of the Sith',
+    content: `<p>Can we be done with Hayden Christensen now?</p>`
+  },
+  {
     title: 'A New Hope',
     content: `
       <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/StarWarsMoviePoster1977.jpg/220px-StarWarsMoviePoster1977.jpg">
@@ -49,5 +61,21 @@ export const tabData = [
       <strong>80%</strong>: Though failing to reach the cinematic heights of its predecessors, Return of the Jedi remains an entertaining sci-fi adventure and a fitting end to the classic trilogy.
     </p>
     `
+  },
+  {
+    title: 'The Force Awakens',
+    content: `<p>"Chewie... we're home!"</p>`
+  },
+  {
+    title: 'Rogue One',
+    content: `<p>Star Wars Episode 8: Everybody Friggin' Dies.</p>`
+  },
+  {
+    title: 'The Last Jedi',
+    content: `<p>Well <strong>I</strong> thought it was great. I'm ready to watch it again...`
+  },
+  {
+    title: 'Solo',
+    content: `Um... I never thought I'd be saying this, but isn't this starting to be a lot of Star Wars movies? Did you say first of three Han Solo spinoffs?`
   }
 ]

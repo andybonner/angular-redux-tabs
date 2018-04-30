@@ -7,3 +7,20 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.valign-wrapper {
+  height: 100vh;
+}
+
+img {
+  max-height: 344px;
+  float: right;
+  margin-left: 10px;
+}
+
+hr {
+  width: 50%;
+  height: 1px;
+  border: none;
+  background-color: #ffc107;
+}

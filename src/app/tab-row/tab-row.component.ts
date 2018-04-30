@@ -17,6 +17,7 @@ export class TabRowComponent {
   ) { }
 
   @select() readonly tabsArray$: Observable<any>;
+  @select() readonly activeTabIndex$: Observable<number>;
 
   select(index) {
     this.ngRedux.dispatch(this.actions.select(index));
