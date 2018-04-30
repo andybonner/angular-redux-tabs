@@ -19,7 +19,6 @@ export class PopulateButtonComponent {
   ) {}
 
   populate(dataSet) {
-    console.log(this.dataSet);
     this.ngRedux.dispatch(this.actions.populate(this.dataSet));
   }
 
