@@ -18,8 +18,7 @@ export class PopulateButtonComponent {
     private actions: TabActions
   ) {}
 
-  populate() {
-    console.log(this.dataSet);
+  populate(dataSet) {
     this.ngRedux.dispatch(this.actions.populate(this.dataSet));
   }
 
